@@ -16,10 +16,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+#
 
-case node[:platform]
-when "redhat", "centos", "fedora"
-  package "ImageMagick"
-when "debian", "ubuntu"
-  package "imagemagick"
+enable_package "media-gfx/imagemagick" do
+  version "6.4.9.2"
 end
+
+package "media-gfx/imagemagick" do
+    version "6.4.9.2"
+    action :install
+end
+
