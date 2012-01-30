@@ -1,4 +1,5 @@
 require_recipe "mongodb"
+require_recipe 'imagemagick'
 
 #execute "testing" do
 #  command %Q{
